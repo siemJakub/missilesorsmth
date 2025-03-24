@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+        <title> Main Page </title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="JS/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1" >
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+    </head>
+
+    <body onload="clock()"> 
+        <header>
+            <img src="Photos/Icon.png"><img>
+            <h1>Title</h1>
+            <p id="clock">00:00:00</p>
+        </header>
+
+        <button class="btn_toggle" onclick="toggle_rec()">Togle Rec</button>
+
+        <nav>
+            <a  href="INDEX.html" > <img src="Photos/nav/homeIconW.png"  ></img><p>Home</p></a>
+            <a  href="Page1.html" > <img src="Photos/nav/mavericNavW.png" ></img><p>Maveric</p></a>
+            <a  href="page2.html" > <img src="Photos/nav/amraamNavW.png" ></img><p>AMRAAM</p></a>
+            <a  href="page3.html" > <img src="Photos/nav/harmNavW.png" ></img><p>HARM</p></a>
+            <a  href="page4.html" > <img src="Photos/nav/tomahawkNavW.png" ></img><p>TOMAHAWK</p></a>
+            <a  href="page5.html" > <img src="Photos/nav/helifireNavW.png" ></img><p>HELLFIRE</p></a>       
+        </nav>
+    
+        <h2 id="mainPageh3">Content on site</h2>
+
+        <div class="mainPageBody">
+
+            <div>
+                <a href="Page2.html"><img src="Photos/Main/M_photo1.png" ></img></a>
+                <p>AGM-65 Maverick</p>
+            </div>
+
+            <div>
+                <a href="page2.html"><img src="Photos/Main/M_photo2.png" ></img></a>
+                <p>AIM-120 Amraam</p>
+            </div>
+
+            <div>
+                <a href="page3.html"><img src="Photos/Main/M_photo3.png" ></img></a>
+                <p>AGM-88 Harm</p>
+            </div>
+
+            <div>
+                <a href="page4.html"><img src="Photos/Main/M_photo4.png" ></img></a>
+                <p>BGM-109 Tomahawk</p>
+            </div>
+
+        </div>
+
+        <div><canvas id="canvasRec"></canvas></div>
+
+    </body>
+    
+</html>
