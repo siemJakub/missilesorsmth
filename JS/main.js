@@ -1,12 +1,15 @@
+
+
 function clock(){
     let ctime = new Date();
     let clock = document.getElementById("clock");
+   // console.log(document.URL[document.URL.length-6])
     clock.textContent = fillZero(ctime.getHours()) + ":" + fillZero(ctime.getMinutes()) + ":" + fillZero(ctime.getSeconds())
 }
 
 function fillZero(timeVar) {
     if ( timeVar < 10 ) {
-        console.log("0" + timeVar.toString())
+      
         return "0" + timeVar.toString()
         
     }
