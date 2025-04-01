@@ -63,11 +63,9 @@ nav p {
 }
 
 nav  img{
-    
     width: 100%;
-   height: 100%;
-   object-fit: contain;
-   
+    height: 100%;
+    object-fit: contain;
 }
 
 nav a:hover {
@@ -242,7 +240,7 @@ p.margin {
     text-align: center;
 }
 
-.btn_toggle {
+#btn_toggle {
     position: fixed;
     cursor: pointer;
     border-radius: 6px;
@@ -269,38 +267,58 @@ canvas {
 .gallery_display {
     display: flex;
     justify-content: center;
-    max-width: 50em;
+    width: 60vw;
+    height: 35vw;
 }
 
 .gallery_display > button {
-    z-index: 1000;
-    position: relative;
+    z-index: 100;
+   
     opacity: 0.01;
     border-radius: 10px;
     background-color: #B3C8CF;
 }
 
 .gallery_display > button:hover {
-    z-index: 1000;
-    position: relative;
+    z-index: 100;
+    
     opacity: 0.7;
     border-radius: 10px;
     background-color: #B3C8CF;
 }
 
+.gallery_display > div {
+    width: calc(0.9 * 60vw);
+    height: 100%;
+    display: grid;
+    justify-content: center;
+}
+
 #gallery_btn_left {
     transform: translateX(-100%);
+    transition: all 1s;
 }
 
 #gallery_btn_right {
     transform: translateX(100%);
+    transition: all 1s;
 }
 
-#gallery_scripted_img {
+#gallery_scripted_first_img {
     border-radius: 10px;
-    width: 90%;
-    height: 50.625%;
-    
+    width: calc(0.9 * 60vw);
+    height: 35vw;
+    object-fit: cover;
+    transition: visibility 2s;  
+}
+
+#gallery_scripted_second_img {
+    border-radius: 10px;
+    width: calc(0.9 * 60vw);
+    height: 35vw;
+    object-fit: cover;
+    transition: visibility 2s;
+    position: absolute;
 }
 
 @media only screen and (max-width: 768px) {
@@ -313,5 +331,29 @@ canvas {
 
     nav a {
         width: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }

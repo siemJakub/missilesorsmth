@@ -17,7 +17,7 @@
             <p id="clock">00:00:00</p>
         </header>
         
-        <button class="btn_toggle" onclick="toggle_rec()">Togle Rec</button>
+        <button id="btn_toggle" >Togle Rec</button>
 
         <nav>
             <a  href="INDEX.html" > <img src="Photos/nav/homeIconW.png"  ></img><p>Home</p></a>
@@ -161,9 +161,12 @@
 
         <div class="gallery_scripted">
             <div class="gallery_display">      
-                <button id="gallery_btn_right"><</button>
-                <img id="gallery_scripted_img" src="Photos\Page5\Photo1.png">
-                <button id="gallery_btn_left">></button>
+                <button id="gallery_btn_right" ><</button>
+                <div>
+                    <img id="gallery_scripted_first_img" src="Photos\Page1\Gallery\photo1.png"> 
+                    <img id="gallery_scripted_second_img" src="Photos\Page1\Gallery\photo1.png">
+                </div>
+                <button id="gallery_btn_left" >></button>
             </div>
             
             <h4>Tittle</h4>
