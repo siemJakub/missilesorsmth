@@ -3,15 +3,16 @@
 <html>
   <head>
     <title> Agm 65 Maverick  </title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" >
   </head>
 
     <body>
    
         <header>
-            <img src="Photos/Icon.png"><img>
+            <img src="photos/Icon.png"><img>
             <h1>AGM-114 Hellfire</h1>
             <p id="clock">00:00:00</p>
         </header>
@@ -19,12 +20,12 @@
         <button id="btn_toggle" >Togle Rec</button>
     
         <nav>
-            <a  href="INDEX.html" > <img src="Photos/nav/homeIconW.png"  ></img><p>Home</p></a>
-            <a  href="Page1.html" > <img src="Photos/nav/mavericNavW.png" ></img><p>Maveric</p></a>
-            <a  href="page2.html" > <img src="Photos/nav/amraamNavW.png" ></img><p>AMRAAM</p></a>
-            <a  href="page3.html" > <img src="Photos/nav/harmNavW.png" ></img><p>HARM</p></a>
-            <a  href="page4.html" > <img src="Photos/nav/tomahawkNavW.png" ></img><p>TOMAHAWK</p></a>
-            <a  href="page5.html" > <img src="Photos/nav/helifireNavW.png" ></img><p>HELLFIRE</p></a>       
+            <a  href="index.html" > <img src="photos/nav/homeIconW.png"  ></img><p>Home</p></a>
+            <a  href="page1.html" > <img src="photos/nav/mavericNavW.png" ></img><p>Maveric</p></a>
+            <a  href="page2.html" > <img src="photos/nav/amraamNavW.png" ></img><p>AMRAAM</p></a>
+            <a  href="page3.html" > <img src="photos/nav/harmNavW.png" ></img><p>HARM</p></a>
+            <a  href="page4.html" > <img src="photos/nav/tomahawkNavW.png" ></img><p>TOMAHAWK</p></a>
+            <a  href="page5.html" > <img src="photos/nav/helifireNavW.png" ></img><p>HELLFIRE</p></a>       
         </nav>
 
         <div>
@@ -39,7 +40,8 @@
 
         </br>
 
-        <img class="center" src="Photos/Page5/photo1.png">  </img>
+        <img class="center" src="photos/page5/photo1.png">  </img>
+        <a href="https://commons.wikimedia.org/wiki/File:Lockheed_Martin_Longbow_Hellfire.jpg" class="center"> source </a>
 
         </br>
 
@@ -125,42 +127,57 @@
             </br>
 
             <div>
-                <a href="Photos/Page5/Gallery/seeker_114.png" >
-                <img src="Photos/Page5/Gallery/seeker_114.png" width="300" height="225" > </a>
+                <a href="https://en.defence-ua.com/weapon_and_tech/norway_transfers_hellfire_anti_tank_missiles_to_ukraine_warriors_of_ukraines_army_are_already_trained_and_ready_to_use_them-4154.html" >
+                <img src="photos/page5/gallery/photo1.png" width="300" height="225" > </a>
                 <p>Hellfire seeker</p>
             
             </div>
         
             <div>
-                <a href="Photos/Page5/Gallery/mq9_114.jpg">
-                <img src="Photos/Page5/Gallery/mq9_114.jpg" width="300" height="225"></a>
+                <a href="https://www.military.com/daily-news/2020/09/30/mq-9-reaper-drone-flies-double-hellfire-missiles-new-test.html">
+                <img src="photos/page5/gallery/photo2.png" width="300" height="225"></a>
                 <p>AGM-114 under the wing of MQ-9 drone</p>
             </div>
 
             <div>
-                <a href="Photos/Page5/Gallery/HellfireOperators.png">
-                <img src="Photos/Page5/Gallery/HellfireOperators.png"width="300" height="225" ></a>
+                <a href="https://commons.wikimedia.org/wiki/File:HellfireOperators.png">
+                <img src="photos/page5/gallery/photo3.png"width="300" height="225" ></a>
                 <p>Current Hellfire operators</p>
             </div>
 
             <div>
-                <a href="Photos/Page5/Gallery/cobra_114.png">
-                <img src="Photos/Page5/Gallery/cobra_114.png" width="300" height="225"></a>
+                <a href="https://defence.pk/threads/agm-114r-multi-purpose-hellfire-ii-missile-for-pakistani-vipers.369469/">
+                <img src="photos/page5/gallery/photo4.png" width="300" height="225"></a>
                 <p>AH-1z firing hellfire</p>
             </div>
 
             <div>
-                <a href="Photos/Page5/Gallery/ah64_114.png">
-                <img src="Photos/Page5/Gallery/ah64_114.png" width="300" height="225"></a>
+                <a href="https://www.globalsecurity.org/military/library/budget/fy2001/dot-e/army/01apache.html">
+                <img src="photos/page5/gallery/photo5.png" width="300" height="225"></a>
                 <p>AH-64 with hellfires</p>
             </div>
             
             <div>
-                <a href="Photos/Page5/Gallery/agm114.png">
-                <img src="Photos/Page5/Gallery/agm114.png" width="300" height="225"></a>
+                <a href="https://imgur.com/closeup-of-hellfire-missile-pylon-2004-u1aJmvZ">
+                <img src="photos/page5/gallery/photo6.png" width="300" height="225"></a>
                 <P>A F-18C armed with Maverick</P>
             </div>
         </div>
+
+        <div class="gallery_scripted">
+            <div class="gallery_display">      
+                <button id="gallery_btn_right" ><</button>
+                <div>
+                    <img id="gallery_scripted_first_img" src="photos\page1\gallery\photo1.png"> 
+                    <img id="gallery_scripted_second_img" src="photos\page1\gallery\photo1.png">
+                </div>
+                <button id="gallery_btn_left" >></button>
+            </div>
+            
+            <h4>AGM 65D</h4>
+            <p>desc - 1</p>
+        </div>
+
         <div><canvas id="canvasRec"></canvas></div>
     </body>
 </html>

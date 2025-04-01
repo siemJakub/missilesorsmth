@@ -1,45 +1,48 @@
+// This is a school project. 
+// The images do not belong to me and were used for scientific purposes only
+
 function clock(){
     let ctime = new Date();
     let clock = document.getElementById("clock");
-    clock.textContent = fillZero(ctime.getHours()) + ":" + fillZero(ctime.getMinutes()) + ":" + fillZero(ctime.getSeconds())
+    clock.textContent = fillZero(ctime.getHours()) + ":" + fillZero(ctime.getMinutes()) + ":" + fillZero(ctime.getSeconds());
 }
 
 function fillZero(timeVar) {
     if ( timeVar < 10 ) {
       
-        return "0" + timeVar.toString()
+        return "0" + timeVar.toString();
         
     }
     else {
-        return timeVar.toString()
+        return timeVar.toString();
     }
 }
 
-window.global_rec_on = false
-window.hover_elements = []
+window.global_rec_on = false;
+window.hover_elements = [];
 //localstorage
 
 function toggle_rec() {
-    window.global_rec_on = !window.global_rec_on
+    window.global_rec_on = !window.global_rec_on;
 }
 
 function element_hover(element) {
     switch (element.tagName) {
         case 'BUTTON':
             if (element.parentElement.className == "gallery_display" ) {
-                element.style.opacity = "0.7" 
+                element.style.opacity = "0.7";
             }
             break;
 
         case 'IMG': 
             if ( element.parentElement.parentElement.parentElement != null && element.parentElement.parentElement.parentElement.className == 'gallery-flex') {
-                element.style.transform = 'scale(1.10)'
+                element.style.transform = 'scale(1.10)';
             }
 
             if ( element.parentElement.parentElement.tagName == 'NAV') {
                 element.parentElement.style.backgroundColor = "#E5E1DA";
                 element.style.filter = "brightness(0)";
-                element.parentElement.children[1].style.color = "#737373" //napis
+                element.parentElement.children[1].style.color = "#737373";
             }
 
             if ( element.parentElement.parentElement.parentElement.className == 'mainPageBody') {
@@ -47,9 +50,9 @@ function element_hover(element) {
             }
         case 'P' :
             if (element.parentElement.parentElement.tagName == 'NAV') {
-                element.parentElement.style.backgroundColor = "#E5E1DA"
+                element.parentElement.style.backgroundColor = "#E5E1DA";
                 element.parentElement.children[0].style.filter = "brightness(0)";
-                element.style.color = "#737373"
+                element.style.color = "#737373";
             }
 
             break;
@@ -63,12 +66,10 @@ function element_hover_off(element) {
 
     if (element == null) {return}
 
-    
-
     switch (element.tagName) {
         case 'BUTTON':
             if (element.parentElement.className != null && element.parentElement.className == "gallery_display" ) {
-                element.attributeStyleMap.clear() 
+                element.attributeStyleMap.clear();
             }
             break;
 
@@ -76,21 +77,21 @@ function element_hover_off(element) {
             if ( element.parentElement.parentElement.parentElement != null 
               && element.parentElement.parentElement.parentElement.className == 'gallery-flex') {
                 
-                element.attributeStyleMap.clear()
+                element.attributeStyleMap.clear();
             }
 
             if ( element.parentElement.parentElement.tagName != null 
               && element.parentElement.parentElement.tagName == 'NAV') {
 
-                element.parentElement.attributeStyleMap.clear()
-                element.attributeStyleMap.clear()
-                element.parentElement.children[1].attributeStyleMap.clear()
+                element.parentElement.attributeStyleMap.clear();
+                element.attributeStyleMap.clear();
+                element.parentElement.children[1].attributeStyleMap.clear();
             }
 
             if ( element.parentElement.parentElement.parentElement.className != null 
               && element.parentElement.parentElement.parentElement.className == 'mainPageBody') {
 
-                element.parentElement.parentElement.attributeStyleMap.clear()
+                element.parentElement.parentElement.attributeStyleMap.clear();
             }
 
         default:
@@ -104,14 +105,14 @@ function add_to_list(element) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    let event = null
-    let alpha = 1.0
-    let hover_element = null
-    let allowed_elements = ['BUTTON', 'A', 'IFRAME', 'IMG', 'P']
+    window.last_time = Date.now();
+    let event = null;
+    let alpha = 1.0;
+    let hover_element = null;
+    let allowed_elements = ['BUTTON', 'A', 'IFRAME', 'IMG', 'P'];
 
     document.body.addEventListener('mousemove', (e) =>  {
-        event = e
+        event = e;
 
         if(window.global_rec_on) {
             let elements = document.elementsFromPoint(event.clientX, event.clientY);
@@ -131,19 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.body.addEventListener('mouseleave', (e) => {
-
-        // if(window.global_rec_on) {
-
-        //     let elements = document.elementsFromPoint(event.clientX, event.clientY);
-        //     if( i.tagName == 'BUTTON' || i.tagName == 'A' || i.tagName == 'EFRAME' || i.tagName == 'IMG' ) {
-        //         console.log('leave')
-        //         element_hover_off(elements[1])
-        //         //alpha = 1   
-        //     }
-        // }
-    }) 
-
     document.body.addEventListener('click', (e) => {
         if ( event != null && window.global_rec_on == true && e.target.tagName == 'CANVAS'  ) {
             let elements = document.elementsFromPoint(event.clientX, event.clientY);
@@ -158,13 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let canvas = document.querySelector('canvas');
     let ctx = canvas.getContext('2d');
+    
 
     function frame() {
-        clock()
-       
+        clock();
+        let time = Date.now();
+
         if(window.global_rec_on) {
            
-            let time = Date.now();
+            
             canvas.style.top = `${event.clientY-50}px`;
             canvas.style.left = `${event.clientX-50}px`;
             canvas.style.opacity = alpha.toString();
@@ -173,12 +163,16 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillStyle ="rgba("+(time / 10 % 255)+","+(time / 5 % 255)+","+(time / 2 % 255)+",0.8)";
         
             ctx.fillRect(0, 0, 100, 100);
-            canvas.style.display = 'block'        
+            canvas.style.display = 'block';      
         }
         else {
-            canvas.style.display = 'none'
+            canvas.style.display = 'none';
         }
 
+        if ((last_time + 5000) <= time) {
+            switch_photo(true);
+        }
+        
         requestAnimationFrame(frame);
     }
 

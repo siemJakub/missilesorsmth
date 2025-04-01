@@ -3,15 +3,16 @@
 <html>
   <head>
     <title> Agm 65 Maverick  </title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1" >
   </head>
 
     <body>
    
         <header>
-            <img src="Photos/Icon.png"><img>
+            <img src="photos/Icon.png"><img>
             <h1>AIM-120 Amraam</h1>
             <p id="clock">00:00:00</p>
         </header>
@@ -19,12 +20,12 @@
         <button id="btn_toggle" >Togle Rec</button>
 
         <nav>
-            <a  href="INDEX.html" > <img src="Photos/nav/homeIconW.png"  ></img><p>Home</p></a>
-            <a  href="Page2.html" > <img src="Photos/nav/mavericNavW.png" ></img><p>Maveric</p></a>
-            <a  href="page2.html" > <img src="Photos/nav/amraamNavW.png" ></img><p>AMRAAM</p></a>
-            <a  href="page3.html" > <img src="Photos/nav/harmNavW.png" ></img><p>HARM</p></a>
-            <a  href="page4.html" > <img src="Photos/nav/tomahawkNavW.png" ></img><p>TOMAHAWK</p></a>
-            <a  href="page5.html" > <img src="Photos/nav/helifireNavW.png" ></img><p>HELLFIRE</p></a>       
+            <a  href="index.html" > <img src="photos/nav/homeIconW.png"  ></img><p>Home</p></a>
+            <a  href="page1.html" > <img src="photos/nav/mavericNavW.png" ></img><p>Maveric</p></a>
+            <a  href="page2.html" > <img src="photos/nav/amraamNavW.png" ></img><p>AMRAAM</p></a>
+            <a  href="page3.html" > <img src="photos/nav/harmNavW.png" ></img><p>HARM</p></a>
+            <a  href="page4.html" > <img src="photos/nav/tomahawkNavW.png" ></img><p>TOMAHAWK</p></a>
+            <a  href="page5.html" > <img src="photos/nav/helifireNavW.png" ></img><p>HELLFIRE</p></a>       
         </nav>
 
         <div>
@@ -35,7 +36,7 @@
 
         </br>
 
-        <img class="center" src="Photos/Page2/photo1.png">  </img>
+        <img class="center" src="photos/page2/photo1.png">  </img>
 
         </br>
 
@@ -121,42 +122,58 @@
             </br>
 
             <div>
-                <a href="Photos/Page2/Gallery/1280px-F-14_carrying_AMRAAM.png" >
-                <img src="Photos/Page2/Gallery/1280px-F-14_carrying_AMRAAM.png" width="300" height="225" > </a>
+                <a href="https://commons.wikimedia.org/wiki/File:F-14_carrying_AMRAAM.jpg" >
+                <img src="photos/page2/gallery/photo1.png" width="300" height="225" > </a>
                 <p>F-14 carrying AMRAAM</p>
             
             </div>
         
             <div>
-                <a href="Photos/Page2/Gallery/AIM-120_first_kill.png">
-                <img src="Photos/Page2/Gallery/AIM-120_first_kill.png" width="300" height="225"></a>
+                <a href="https://commons.wikimedia.org/wiki/File:AIM-120_first_kill.jpg">
+                <img src="photos/page2/gallery/photo2.png" width="300" height="225"></a>
                 <p>AIM-120 first kill</p>
             </div>
 
             <div>
-                <a href="Photos/Page2/Gallery/AIM-120_AMRAAM-training.png">
-                <img src="Photos/Page2/Gallery/AIM-120_AMRAAM-training.png"width="300" height="225" ></a>
+                <a href="https://commons.wikimedia.org/wiki/File:AIM-120_AMRAAM_and_AIM-9_Sidewinder.JPG">
+                <img src="photos/page2/gallery/photo3.png" width="300" height="225" ></a>
                 <p>Training version of AIM-120 (blue rings)</p>
             </div>
 
             <div>
-                <a href="Photos/Page2/Gallery/F-22_GBU39B_AIM-120_m02006120800117.png">
-                <img src="Photos/Page2/Gallery/F-22_GBU39B_AIM-120_m02006120800117.png" width="300" height="225"></a>
+                <a href="https://commons.wikimedia.org/wiki/File:F-22_GBU39B_AIM-120_m02006120800117.jpg">
+                <img src="photos/page2/gallery/photo4.png" width="300" height="225"></a>
                 <p>AIM-120 in F22 weapons bay</p>
             </div>
 
             <div>
-                <a href="Photos/Page2/Gallery/amraam-dvic409-2699518642.png">
-                <img src="Photos/Page2/Gallery/amraam-dvic409-2699518642.png" width="300" height="225"></a>
+                <a href="https://www.globalsecurity.org/jhtml/jframe.html#https://www.globalsecurity.org/military/systems/munitions/images/amraam-dvic409.jpg|||">
+                <img src="photos/page2/gallery/photo5.png" width="300" height="225"></a>
                 <p>AIM-120 carried by F-18</p>
             </div>
             
             <div>
-                <a href="Photos/Page2/Gallery/AIM_120_2Eng-4003498820.png">
-                <img src="Photos/Page2/Gallery/AIM_120_2Eng-4003498820.png" width="300" height="225"></a>
+                <a href="https://www.globalsecurity.org/jhtml/jframe.html#https://www.globalsecurity.org/military/systems/munitions/images/amraam-4.jpg|||">
+                <img src="photos/page2/gallery/photo6.png" width="300" height="225"></a>
                 <P>AIM-120 scheme</P>
             </div>
         </div>
+
+        <div class="gallery_scripted">
+            <div class="gallery_display">      
+                <button id="gallery_btn_right" ><</button>
+                <div>
+                    <img id="gallery_scripted_first_img" src="photos\page1\gallery\photo1.png"> 
+                    <img id="gallery_scripted_second_img" src="photos\page1\gallery\photo1.png">
+                </div>
+                <button id="gallery_btn_left" >></button>
+            </div>
+            
+            <h4>AGM 65D</h4>
+            <p>desc - 1</p>
+
+        </div>
+
         <div><canvas id="canvasRec"></canvas></div>
     </body>
 </html>
